@@ -148,10 +148,17 @@ async def button(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         await q.message.reply_text("🔍 Введите название товара:")
 
     elif data == "order_info":
-        await q.message.reply_text(
-            "🛒 Чтобы заказать, выберите товар в каталоге и нажмите «Заказать».\n"
-            "Или напишите нам на https://zaytynkg.com"
-        )
+    kb = [
+        [InlineKeyboardButton("🚚 Today Express", callback_data="delivery_today")],
+        [InlineKeyboardButton("🚛 YLDAM Express", callback_data="delivery_yldam")],
+        [InlineKeyboardButton("🚕 Чолпон-Ата / Иссык-Куль", callback_data="delivery_local")],
+        [InlineKeyboardButton("📍 Самовывоз Бостери", callback_data="delivery_pickup")]
+    ]
+
+    await q.message.reply_text(
+        "Выберите способ доставки:",
+        reply_markup=InlineKeyboardMarkup(kb)
+    )
 
     elif data == "wholesale_info":
         await q.message.reply_text(
