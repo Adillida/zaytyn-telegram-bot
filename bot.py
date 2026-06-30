@@ -26,6 +26,9 @@ WC_SECRET   = os.environ["WC_CONSUMER_SECRET"]# cs_...
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+user_data = {}
+ORDER_STATE = {}
+
 # ─── WOOCOMMERCE HELPERS ──────────────────────────────────────────────────────
 def wc_get(endpoint: str, params: dict = None) -> dict | list:
     """GET from WooCommerce REST API."""
