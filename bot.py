@@ -161,10 +161,10 @@ async def button(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     )
 
     elif data == "wholesale_info":
-    await q.message.reply_text(
-        "📦 Оптовые условия: напишите на info@zaytynkg.com\n"
-        "Или посетите: https://zaytynkg.com/оптовые-продажи/"
-    )
+        await q.message.reply_text(
+            "📦 Оптовые условия: напишите на info@zaytynkg.com\n"
+            "Или посетите: https://zaytynkg.com/оптовые-продажи/"
+        )
 
     elif data == "support":
         await q.message.reply_text(
