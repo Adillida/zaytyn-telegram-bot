@@ -160,7 +160,7 @@ async def button(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                     "Выберите способ доставки:",
                     reply_markup=InlineKeyboardMarkup(kb)
             )
-        elif data == "delivery_today":
+    elif data == "delivery_today":
             await q.message.reply_text(
                 "🚚 Today Express выбран.\n\nВведите ваше имя и номер телефона."
         )
