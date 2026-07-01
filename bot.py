@@ -255,8 +255,8 @@ async def text_message(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
 
     if ctx.user_data.get("awaiting_search"):
-        ctx.user_data.pop("awaiting_search")
-        await _do_search(update.message, text)
+       ctx.user_data.pop("awaiting_search")
+       await _do_search(update.message, text)
 
     elif ctx.user_data.get("awaiting_order"):
         ctx.user_data.pop("awaiting_order")
