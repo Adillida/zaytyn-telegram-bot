@@ -260,15 +260,13 @@ async def text_message(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     elif ctx.user_data.get("awaiting_order"):
         ctx.user_data.pop("awaiting_order")
+        prod_id = ctx.user_data.get("ordering_product", "-")
         delivery = ctx.user_data.get("delivery", "-")
         await update.message.reply_text(
             f"✅ Заявка принята!\n\n"
             f"Товар ID: {prod_id}\n"
             f"Доставка: {delivery}\n"
             f"Контакт: {text}\n\n"
-            
-            
-            
             f"Менеджер свяжется с вами в ближайшее время.\n"
             f"Или оформите на сайте: https://zaytynkg.com"
         )
