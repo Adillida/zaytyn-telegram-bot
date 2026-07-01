@@ -161,29 +161,29 @@ async def button(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                     reply_markup=InlineKeyboardMarkup(kb)
             )
     elif data == "delivery_today":
-    ctx.user_data["awaiting_order"] = True
-    ctx.user_data["delivery"] = "Today Express"
+        ctx.user_data["awaiting_order"] = True
+        ctx.user_data["delivery"] = "Today Express"
         await q.message.reply_text(
                 "🚚 Today Express выбран.\n\nВведите ваше имя и номер телефона."
         )
 
     elif data == "delivery_yldam":
-    ctx.user_data["awaiting_order"] = True
-    ctx.user_data["delivery"] = "YLDAM Express"
+        ctx.user_data["awaiting_order"] = True
+        ctx.user_data["delivery"] = "YLDAM Express"
         await q.message.reply_text(
                 "🚛 YLDAM Express выбран.\n\nВведите ваше имя и номер телефона."
         )
 
     elif data == "delivery_local":
-    ctx.user_data["awaiting_order"] = True
-    ctx.user_data["delivery"] = "Локальная доставка"
+        ctx.user_data["awaiting_order"] = True
+        ctx.user_data["delivery"] = "Локальная доставка"
         await q.message.reply_text(
                 "🚖 Локальная доставка выбрана.\n\nВведите ваше имя и номер телефона."
         )
 
     elif data == "delivery_pickup":
-    ctx.user_data["awaiting_order"] = True
-    ctx.user_data["delivery"] = "Самовывоз Бостери"
+        ctx.user_data["awaiting_order"] = True
+        ctx.user_data["delivery"] = "Самовывоз Бостери"
         await q.message.reply_text(
                 "📍 Самовывоз выбран.\n\nВведите ваше имя и номер телефона."
         )
