@@ -139,6 +139,7 @@ async def button(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     q = update.callback_query
     await q.answer()
     data = q.data
+    print("CALLBACK:", data)
 
     if data == "catalog":
         await catalog(update, ctx)
